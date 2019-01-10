@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset = "UTF-8">
+    <title>Giphy-fied</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css"> 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+    
+
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron" id="instructions">
+    <h1 id="header">Let's travel!</h1>
+    <h4 id="belowHeader">Enter the country of your choice below to search for related Gif's</h4> 
+</div>
+</div>
+                
+
+<div class="container">
+    <form id="countryForm">
+    <h4><label for="countryInput">Add a Country: </label></h4>
+    <input type="text" id="countryInput">
+    <input id="add-country" type="submit" value="Submit">
+</form>
+</div>
+
+<div class="container" id="buttonHolder">
+</div>
+
+<br>
+
+<div class="container" id="results">
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+#buttonHolder {
+    padding: 20px;
+}
+
+body {
+    background: url("travelgif.jpg");
+}
+
+#header {
+    font-family: 'Cinzel', serif;
+}
+
+#belowHeader {
+    font-family: 'Courgette', cursive;
+}
+
+#instructions {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 20px;
+    background: #1cc1db;
+    border: solid .5px;
+    text-align: center;
+      
+}
+
+#countryForm, #buttonHolder {
+    text-align: center;
+}
+
+
