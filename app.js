@@ -3,17 +3,18 @@ $(document).ready(function() {
 
     // Define initial variables
 var topics = [];
-console.log(topics);
+// console.log(topics);
 
 
 
 
-function displayTopTen() {
+function displayTopTen(newGif) {
     var searchCountry = $(this).data("search");
-    console.log(searchCountry);
+    var userInput = $("#countryInput").val();
+    console.log(userInput);
        
     // Call to Giphy API
-     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchCountry + "&api_key=b8gF3vpZA0Eyy44SCMK3fHd2hgskQVKw&limit=10&rating=pg";
+     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newGif + "&api_key=b8gF3vpZA0Eyy44SCMK3fHd2hgskQVKw&limit=10&rating=pg";
      console.log(queryURL);
         
         $.ajax({
@@ -47,9 +48,11 @@ function displayTopTen() {
 $("#add-country").on("click", function(event) {
     event.preventDefault();
     var newGif = $("#countryInput").val().trim();
+    console.log(newGif);
     topics.push(newGif);
     $("#countryInput").val('');
     renderButtons();
+    displayTopTen(newGif);
 });
 
 
@@ -68,18 +71,19 @@ renderButtons();
 
 $(document).on("click", "#show", displayTopTen);
 $(document).on("click", "#add-country", displayTopTen);
-$(document).on("click", "countryGiphy", pausePlayGifs);
+// $(document).on("click", "countryGiphy", pausePlayGifs);
 
-function pausePlayGifs() {
+$("#results").on("click", ".countryGiphy", function() {
     var state = $(this).attr("data-state");
     if (state === "still") {
         $(this).attr("src", $(this).attr("data-animate"));
         $(this).attr("date-state", "animate");
-    } else {
+    } 
+    else if (state === "animate"){
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
     }
-    }
+}) 
 
 
 
