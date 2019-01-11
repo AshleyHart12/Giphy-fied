@@ -3,7 +3,7 @@
 }
 
 body {
-    background: url("travelgif.jpg");
+    background: url("movie.jpg");
 }
 
 #header {
@@ -18,7 +18,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 20px;
-    background: #1cc1db;
+    background: white;
     border: solid .5px;
     text-align: center;
       
@@ -26,6 +26,7 @@ body {
 
 #countryForm, #buttonHolder {
     text-align: center;
+    color: black;
 }
 
 
